@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/Users/Sabuhi/Desktop/XML_DH/Schema_assignment_4.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+
+<document>
+    <metadata>
+        <author>Gentleman in the countrey</author>
+        <title>A CAUTION AGAINST Tumultuous Petitions: From a Gentleman in the Countrey, To his Friend in London</title>
+        <date>1679-12-30</date>
+        <document_feature type="textual information,letter">Book,Reproduction of original in Cambridge University Library</document_feature>
+        <genre>caution</genre>
+        <language xml:lang="en"></language>
+        <location>London</location>
+        <publication_date specification="unknown"></publication_date>
+        <publisher>Printed for W.C.</publisher>
+        <subject>Early English chronicles</subject>
+    </metadata>
+    <page>
+        <paragraph>
+            <line><salutation>SIR,</salutation>THat little discourse we had last, wherein my opinion and suffrage was desired, concerning the reasonableness of General Addresses of all the <org_name>Members to the Head,</org_name> in an universal distemper of the Body;</line>
+            <line>The redeemed <org_name specification="monarchy supporters">Loyal Royallists</org_name> repent not of their intemperancies, or at least reform it not;</line>
+            <line>...neither the <org_name specification="supporter of Pope">Papists</org_name> of their <org_name specification="pre-Abrahamic religious belief">Idolatries</org_name> and Conspiracies; the <org_name specification="members of particular church">Presbyterians</org_name> and Parliamenteers of their <emph specification="linguistic effect">Murthers</emph>, Sorceries, Fornications, and Thefts; </line>
+        </paragraph>
+    </page>
+    <page>
+        <paragraph>
+            <line>How zealous God <emph>hath</emph> been for the supream <org_name>Magistrate,</org_name></line>
+            <line>...and how severe to such as are over-busie to censure or pry into the <emph specification="rhetorical effect">Errors of Princes,</emph></line>
+            <line>...there is a notable example in the punishment of <human_name name_type="biblical"><hi>Miriam</hi></human_name>, for lessening her reverence and duty to<human_name name_type="biblical"><hi>Moses</hi></human_name>,</line>
+            <line>...though a Brother, because he had taken a <ethnic_group>Gipsie</ethnic_group>, or <ethnic_group><hi>Ethiopian</hi></ethnic_group>Woman</line>
+            <line>...or to speak in the language of our bad <emph specification="rhetocical effect">Times,</emph> a Miss:</line>
+            <line>...And yet God said to an <title_of_person>High-Priest</title_of_person> and a Prophetess,</line>
+            <line>...<said><hi>Wherefore then were ye not afraid to speak against my servant <human_name name_type="biblical">Moses</human_name></hi></said>?</line>
+            <line>...<said>and the anger of the Lord was kindled against them, and <human_name name_type="biblical">Miriam.</human_name></said></line>
+            <line>...<said>became leprous, white as snow.</said></line>
+        </paragraph>
+        <paragraph>
+            <line>Let us therefore fear God and the <title_of_person>King</title_of_person> and not meddle with those that are given to change,</line>
+            <line>...which I think is at this time a duty incumbent upon all that have the <emph specification="rhetorical effect">Cure of Souls,</emph> to press upon their Congregations.</line>
+        </paragraph>
+        <paragraph>
+            <line>...<signature><hi>Your Affectionate Friend.</hi></signature>
+            </line>
+        </paragraph>
+    </page>
+</document>
+
+
+
+
+

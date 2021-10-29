@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="document">
+            <oneOrMore>
+              <ref name="element.metadata"></ref>
+            </oneOrMore>
+            <oneOrMore>
+              <ref name="element.page"></ref>
+            </oneOrMore>
+        </element>
+     </start>
+    
+    <!-- the following elements encode metadata information  -->
+   
+    <define name="element.metadata">
+        <element name="metadata">
+            <ref name="element.author"></ref>
+            <ref name="title"></ref>
+            <ref name="element.date"></ref>
+            <ref name="element.document_feature"></ref>
+            <ref name="element.genre"></ref>
+            <ref name="element.language"></ref>
+            <ref name="element.location"></ref>
+            <ref name="element.publication_date"></ref>
+            <ref name="element.publisher"></ref>
+            <ref name="element.subject"></ref>
+        </element>
+    </define>
+    <define name="title">
+        <element name="title">
+            <text></text>
+        </element>
+    </define>
+    <define name="element.author">
+        <element name="author">
+            <optional>
+                <text></text>
+            </optional>
+        </element>
+    </define>
+    <define name="element.subject">
+        <element name="subject">
+            <text></text>
+        </element>
+    </define>
+    <define name="element.genre">
+        <element name="genre">
+            <text></text>
+        </element>
+    </define>
+    <define name="element.language">
+        <element name="language">
+            <attribute name="xml:lang">
+                <data type="language"></data>
+            </attribute>
+        </element>
+    </define>
+    
+    <!-- this element includes the date when the document is written, not published  -->
+    <define name="element.date">
+        <element name="date">
+            <optional>
+            <data type="date"></data>
+            </optional>
+        </element>
+    </define>
+    <define name="element.publication_date">
+        <element name="publication_date">
+            <optional>
+              <data type="date"></data>
+            </optional>
+            <optional>
+                <attribute name="specification"></attribute>
+            </optional>
+        </element>
+    </define>
+    <define name="element.publisher">
+        <element name="publisher">
+            <optional>
+                <text></text>
+            </optional>
+        </element>
+    </define>
+   <define name="element.location">  <!-- this element indicates the location of events described in documnets. For example, the events in the document "Bills of mortality" take place in London, Norwich, and Westminster. This element should not be confused with element 'place_name'element. 'Place_name' is used to specify any city, country, or kingdom, mentioned in the documents. -->
+        <element name="location">
+            <text></text>
+        </element>
+    </define>
+    <define name="element.document_feature">
+        <element name="document_feature">
+            <attribute name="type"></attribute>
+            <optional>
+               <text>
+               </text> 
+            </optional>
+        </element>
+    </define>
+    
+    <!-- internal structure of the document ... -->
+    
+    <define name="element.page">
+        <element name="page">
+            <oneOrMore>
+                <ref name="element.paragraph"></ref>
+            </oneOrMore>
+        </element>
+    </define>  
+    <define name="element.paragraph">
+        <element name="paragraph">
+            <oneOrMore>
+                <ref name="element.line"></ref>
+            </oneOrMore>
+            <optional>
+                <ref name="element.salutation"></ref>
+            </optional>
+            <optional>
+                <ref name="element.singature"></ref>
+            </optional>
+            <optional>
+                <ref name="element.list"></ref>
+            </optional>
+        </element>
+    </define>
+    <define name="element.line">
+        <element name="line">
+            <ref name="model.mixed_content"></ref>
+        </element>
+    </define>
+    <define name="element.salutation">
+        <element name="salutation">
+            <text></text>
+        </element>
+    </define>
+    <define name="element.singature">
+        <element name="signature">
+            <optional>
+                <text></text>
+            </optional>
+            <optional>
+                <ref name="element.hi"></ref>
+            </optional>
+        </element>
+    </define>
+    <!-- the elements 'item', 'text', and 'numbers' are used to create 'list' element. 'List' includes the data in the table ... -->
+   <define name="element.item">
+       <element name="item">
+           <ref name="element.text"></ref>
+           <ref name="element.numbers"></ref>
+       </element>
+    </define>  
+    <define name="element.text">
+        <element name="text">
+            <text></text>
+        </element>
+    </define>
+    <define name="element.numbers">
+        <element name="numbers">
+            <data type="nonNegativeInteger"></data>
+        </element>
+    </define>
+   <define name="element.list">
+       <element name="list">
+           <optional>
+               <oneOrMore>
+                   <ref name="element.item"></ref>
+               </oneOrMore>
+           </optional>
+       </element>
+    </define>
+    <!-- the following elements name people, events, cities, countries, title, ethnicities, religions, or deities ... -->
+    <define name="element.event_in_history">
+        <element name="event_in_history">
+            <optional>
+                <attribute name="type"></attribute>
+            </optional>
+            <text></text>
+        </element>
+    </define>
+    <define name="element.place_name">
+        <element name="place_name">
+            <optional>
+               <attribute name="specification">
+               </attribute>
+            </optional>
+            <optional>
+                <ref name="element.emph"></ref>
+            </optional>
+            <text></text>
+        </element>
+    </define>
+    <define name="element.human_name">
+        <element name="human_name">
+            <optional>
+                <optional>
+                    <attribute name="name_type"></attribute>
+                </optional>
+                <optional>
+                    <ref name="element.hi"></ref>
+                </optional>
+                <text></text>  
+            </optional>
+        </element>
+    </define>
+    <define name="element.title_of_person">
+        <element name="title_of_person">
+            <optional>
+                <text></text>  
+            </optional>
+        </element>
+    </define>
+    <!-- 'org_name element is used to encode a wide range of groups, organization, orders, or religions ... -->
+    <define name="element.org_name"> 
+        <element name="org_name">
+            <optional>
+                <optional>
+                    <attribute name="specification"></attribute>
+                </optional>
+                <text></text>  
+            </optional>
+        </element>
+    </define>
+    <define name="element.ethnic_group">
+        <element name="ethnic_group">
+            <optional>
+                <text></text>  
+            </optional>
+            <optional>
+                <ref name="element.hi"></ref>
+            </optional>
+            <optional>
+                <ref name="element.emph"></ref>
+            </optional>
+        </element>
+    </define>
+    <define name="element.empire_name">
+        <element name="empire_name">
+            <optional>
+                <text></text>  
+            </optional>
+        </element>
+    </define>
+    <define name="element.said">
+        <element name="said">
+            <optional>
+        <text></text>
+            </optional>
+            <optional>
+                <ref name="element.hi"></ref>
+            </optional>
+            <optional>
+                <ref name="element.human_name"></ref>
+            </optional>
+        </element>
+    </define>
+    <define name="element.emph">
+        <element name="emph">
+            <optional>
+                <attribute name="specification"></attribute>
+            </optional>
+            <text/>
+        </element>
+    </define>
+    <define name="element.hi">
+        <element name="hi">
+            <text/>
+            <optional>
+                <ref name="element.human_name"></ref>
+            </optional>
+        </element>
+    </define>
+    <define name="model.mixed_content">
+        <oneOrMore>
+            <choice>
+                <ref name="element.human_name"/>
+                <ref name="element.title_of_person"/>
+                <ref name="element.org_name"></ref>
+                <ref name="element.ethnic_group"></ref>
+                <ref name="element.event_in_history"></ref>
+                <ref name="element.place_name"></ref>
+                <ref name="element.empire_name"></ref>
+                <ref name="element.said"></ref>
+                <ref name="element.emph"></ref>
+                <ref name="element.hi"></ref>
+                <ref name="element.place_name"></ref>
+                <ref name="element.salutation"></ref>
+                <ref name="element.singature"></ref>
+                <text/>
+            </choice>
+        </oneOrMore>
+    </define>
+    
+</grammar>
