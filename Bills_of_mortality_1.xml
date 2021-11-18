@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Schema_assignment_4.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<document>
+   <metadata>
+       <author>Anonymous. Worshipful Company of Parish Clerks</author>
+       <title>A true bill of the vvhole number that hath died in the cittie of London, the citty of VVestminster, the citty of Norwich, and diuers other places, since the time this last sicknes of the plague began in either of them, to this present month of October the 20. day, 1603. With a relation of many visitations by the plague, in sundry other forraine countries.</title>
+       <date>1603-10-20</date>
+       <document_feature type="blackletter,list">Book</document_feature>
+       <genre>Bills of mortality</genre>
+       <language xml:lang="en"></language>
+       <location></location>
+       <publication_date specification="unknown"></publication_date>
+       <publisher>Published by I.Roberts for John Trundle</publisher>
+       <subject>Statiscics</subject>
+   </metadata>
+    <page>
+        <paragraph>
+            <line>In the <emph specification="old language">yéere</emph> of Christ, 81. and in the yere 188. there continued a great time a <event_in_history type="pandemic">plague</event_in_history> in <place_name specification="ancient city">Rome</place_name>, of which there daily died two thousand people.</line>
+        </paragraph>
+        <paragraph>
+            <line>In the <emph specification="old language">yéere</emph> 530. there died in <place_name specification="ancient city">Constantinople</place_name> <emph specification="old language">fiue</emph> thousand a day, and <emph specification="old language">diuers</emph> times tenne thousand:</line>
+            <line>...and at that time, in some other parts of <place_name specification="ancient country"><emph specification="old language">Gréce</emph></place_name>, there were not sufficient liuing men left to bury their dead.</line>
+        </paragraph>
+        <paragraph>
+            <line>In the yéeres 1576. and 77. in <place_name specification="medieval city">Millan</place_name>, <place_name specification="medieval city">Padua</place_name>, and <place_name specification="medieval city">Venice</place_name>, there fell a hundred thousand in <emph specification="old language">euery</emph> Citty:</line>
+            <line>...and in <place_name specification="medieval kingdom">Bohemia (béeing but a small Kingdome)</place_name> there died thrée hundred thousand the same time.</line>
+        </paragraph>
+        <paragraph>
+            <line>Soone after the conquest of <title_of_person>King William, Duke of Normandy</title_of_person>, when the people were subdued to him, and the <title_of_person>Knights</title_of_person> fées rated which he had made,</line>
+            <line>...and himselfe placed with crowne and scepter, hee tooke number of the acres of land in all the realme, and of all the people,</line>
+            <line>...and of all the cattell: after which fell so fore a plague, that the people died in such number that tillage decaied,</line>
+            <line>...and famine ensued, with rot of cattell, that men were faine to eate flesh of dogs, cats, &amp; mise.</line>
+            <line>A fearefull example for <title_of_person>Princes</title_of_person>.</line>
+        </paragraph>
+        <paragraph>
+            <line>In the raigne of <title_of_person>King Edward the third</title_of_person>, there fell a very great pestilence in the <place_name specification="region">East-Indies</place_name>, among the <ethnic_group><emph specification="obsolete name of West Asians and Central Asians">Tartarians</emph></ethnic_group>, <ethnic_group><emph specification="obsolete name of Muslims">Saracens</emph></ethnic_group>, &amp; <ethnic_group>Turks</ethnic_group>,</line>
+            <line>...which lasted the space of <emph specification="typographical error">seauen</emph> yéeres: through the feare whereof, many of the Heathens willingly offered <emph specification="typographical error">themselues</emph> to become Christians.</line>
+            <line>At which time, with the rest that then died of the plague, <title_of_person>Henry Duke of Lancaster</title_of_person>, <title_of_person>Blanch Dutchesse of Lancaster</title_of_person>,</line>
+            <line>...and the Earle of Warwicke ended their <emph specification="typographical error">liues</emph>. So yt in one yéere, in a little plot of ground of 13. acres compasse,</line>
+            <line>...then called <place_name specification="obsolete name">Spittle-croft</place_name>, and now the <place_name specification="cementery">Charter-house</place_name>, was buried fifty thousand persons, besides all them that were then buried in the <place_name specification="burial ground">Churchyards</place_name>, and <emph specification="typographical error">diuers</emph> places in the fields.</line>
+            
+            <list>
+                <item>
+                    <text>From the 14 of Iuly, to the 21. of the same</text>
+                    <numbers>867</numbers>
+                </item>
+                <item>
+                    <text>vvhereof of the plague</text>
+                    <numbers>646</numbers>
+                </item>
+                <item>
+                    <text>In the out Parishes</text>
+                    <numbers>319</numbers>
+                </item>
+                <item>
+                    <text>Whereof of the plague</text>
+                    <numbers>271</numbers>
+                </item>
+            </list>
+        </paragraph>
+      </page>
+</document>
